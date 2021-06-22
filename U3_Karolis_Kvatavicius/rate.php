@@ -1,7 +1,10 @@
 <?php
+
+require "./db_credentials.php";
+
 if (isset($_GET['rating']) && isset($_GET['course'])) {
     // Connection credentials
-    $mysqli = new mysqli("localhost", "root", "student", "egzaminas");
+    $mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
 
     // Check connection
     if ($mysqli->connect_errno) {
